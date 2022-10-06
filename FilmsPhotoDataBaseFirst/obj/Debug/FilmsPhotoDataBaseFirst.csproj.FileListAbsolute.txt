@@ -469,3 +469,7 @@ D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\obj\De
 D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\obj\Debug\FilmsPhotoDataBaseFirst.csproj.CopyComplete
 D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\obj\Debug\FilmsPhotoDataBaseFirst.dll
 D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\obj\Debug\FilmsPhotoDataBaseFirst.pdb
+D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.dll
+D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.dll
+D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.xml
+D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.xml

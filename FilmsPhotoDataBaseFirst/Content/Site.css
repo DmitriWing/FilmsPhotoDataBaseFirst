@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:rgb(0, 0, 0);
+    color:rgb(180, 180, 180);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,6 +23,7 @@ input,
 select,
 textarea {
     max-width: 280px;
+    background: rgb(21, 21, 21);
 }
 
 .navbar-inverse .navbar-toggle:hover,
@@ -29,6 +32,10 @@ textarea {
     border-color: #fff
 }
 /*------------------------------- my ---------------------------------------------*/
+input[type="text"], input[type="submit"], input[type="number"], input[type="file"], textarea.form-control, select.form-control {
+    background-color: rgb(21, 21, 21);
+    color: rgb(180, 180, 180);
+}
 img{
     display:inline-block;
     max-height:90%;
@@ -38,10 +45,12 @@ img{
 }
 .filmCard {
     /* height:15vh;*/
-    margin: 3vh auto;
-    border: 1px solid black;
+    margin: 2em auto;
+    /*border: 1px solid black;*/
     display: flex;
     justify-content: flex-start;
+    background-color:rgb(21, 21, 21);
+    padding:2em 0;
 }
 .index-img{
     width:100%;

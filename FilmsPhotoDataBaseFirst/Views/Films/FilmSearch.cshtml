@@ -1,0 +1,59 @@
+﻿@*model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>*@
+@model PagedList.IPagedList<FilmsPhotoDataBaseFirst.Models.Film>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<h4>Search result for "@ViewBag.search"</h4>
+
+@foreach (var item in Model)
+    {
+        <div class="row filmCard">
+
+            <div class="col-1 filmCover">
+                <img class="index-img img-responsive" src="@Url.Action("GetImage", new { id = item.Id })" />
+            </div>
+            <div class="col-11 filmInfo">
+                <h4 class="filmTitle">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </h4>
+                <div class="filmDesc">@Html.DisplayFor(modelItem => item.Description)</div>
+                <div class="filmYear"> Year : @Html.DisplayFor(modelItem => item.Year)</div>
+                <div class="filmCountry">Country : @Html.DisplayFor(modelItem => item.Country)</div>
+                <div class="navLinks">
+                    Actors:
+                    @{
+                        Html.RenderAction("ActorsInFilm", new { id = item.Id });
+                    }
+                </div>
+            </div>
+        </div><!--row-->
+    }
+@*foreach (var item in Model)
+    {
+        <div class="row filmCard">
+
+            <div class="col-1 filmCover">
+                <img class="index-img img-responsive" src="@Url.Action("GetImage", new { id = item.Id })" />
+            </div>
+            <div class="col-11 filmInfo">
+                <h4 class="filmTitle">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </h4>
+                <div class="filmDesc">@Html.DisplayFor(modelItem => item.Description)</div>
+                <div class="filmYear"> @Html.DisplayNameFor(model => model.Year) : @Html.DisplayFor(modelItem => item.Year)</div>
+                <div class="filmCountry"> @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(modelItem => item.Country)</div>
+                <div class="navLinks">
+                    Actors:
+                    @{
+                        Html.RenderAction("ActorsInFilm", new { id = item.Id });
+                    }
+                </div>
+            </div>
+        </div><!--row-->
+    }*@
+
+
+
+
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

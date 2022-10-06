@@ -5,6 +5,15 @@
 }
 
 <h3>Welcome to the films collection</h3>
+<div>
+    Search films by country:
+    @using (Ajax.BeginForm("FilmSearch", "Films", new AjaxOptions { UpdateTargetId = "result" }))
+    {
+        <input type="text" name="country" />
+        <input type="submit" value="Search" />
+    }
+</div>
+<div id="result"></div>
 
 @foreach (var item in Model)
 {
@@ -22,9 +31,9 @@
             <div class="filmCountry"> @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(modelItem => item.Country)</div>
             <div class="navLinks">
                 Actors:
-               @{
-                   Html.RenderAction("ActorsInFilm", new { id = item.Id });
-               }
+                @{
+                    Html.RenderAction("ActorsInFilm", new { id = item.Id });
+                }
             </div>
         </div>
     </div><!--row-->

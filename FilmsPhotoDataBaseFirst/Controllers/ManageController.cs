@@ -55,8 +55,8 @@ namespace FilmsPhotoDataBaseFirst.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Ваш пароль изменен."
-                : message == ManageMessageId.SetPasswordSuccess ? "Пароль задан."
+                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
+                : message == ManageMessageId.SetPasswordSuccess ? "Password has been set."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Настроен поставщик двухфакторной проверки подлинности."
                 : message == ManageMessageId.Error ? "Произошла ошибка."
                 : message == ManageMessageId.AddPhoneSuccess ? "Ваш номер телефона добавлен."

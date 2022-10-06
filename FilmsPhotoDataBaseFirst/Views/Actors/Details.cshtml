@@ -13,8 +13,13 @@
     @*Films: @{
         Html.RenderAction("FilmsOfActor", new { id = Model.Id });
             } *@
-    @foreach(var films in Model.FilmActor)
-            {
-    <a href="~//Films/Details/@films.FilmId">@films.Film.Title</a><span>&nbsp&nbsp&nbsp</span>
-            }
+    Filmography:<br />
+    @foreach (var films in Model.FilmActor)
+    {
+        <a href="~//Films/Details/@films.FilmId">@films.Film.Title</a><span>&nbsp&nbsp&nbsp</span>
+    }
+</div>
+<div style="text-align:right;">
+    @Html.ActionLink("To Actors List", "Index", "Actors") |
+    @Html.ActionLink("To Films List", "Index", "Films")
 </div>

@@ -6,7 +6,7 @@ namespace FilmsPhotoDataBaseFirst.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
@@ -29,11 +29,11 @@ namespace FilmsPhotoDataBaseFirst.Models
         public string Provider { get; set; }
 
         [Required]
-        [Display(Name = "Код")]
+        [Display(Name = "Code")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Запомнить браузер?")]
+        [Display(Name = "Remember browser?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -42,7 +42,7 @@ namespace FilmsPhotoDataBaseFirst.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
@@ -53,16 +53,16 @@ namespace FilmsPhotoDataBaseFirst.Models
         public string UserName { get; set; }
 
         //[Required]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Пароль")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Запомнить меня")]
+        [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
     }
 
@@ -74,18 +74,18 @@ namespace FilmsPhotoDataBaseFirst.Models
 
         [Required]
         [EmailAddress]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать не менее {2} символов.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Password {0} must contain not less than {2} symbols.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Пароль")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение пароля")]
-        [Compare("Password", ErrorMessage = "Пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Confirm Password")]
+        [Compare("Password", ErrorMessage = "Password and confirmed password are different.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -93,18 +93,18 @@ namespace FilmsPhotoDataBaseFirst.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Адрес электронной почты")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать не менее {2} символов.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Password {0} must contain not less than {2} symbols.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Пароль")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение пароля")]
-        [Compare("Password", ErrorMessage = "Пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Confirm Password")]
+        [Compare("Password", ErrorMessage = "Password and confirmed password are different..")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
@@ -114,7 +114,7 @@ namespace FilmsPhotoDataBaseFirst.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Почта")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using FilmsPhotoDataBaseFirst.Models;
 using System.Globalization;
+using PagedList;
 
 namespace FilmsPhotoDataBaseFirst.Controllers
 {
@@ -34,6 +35,31 @@ namespace FilmsPhotoDataBaseFirst.Controllers
             var filmActors = db.FilmActor.Where(f => f.FilmId == id);
             return PartialView(filmActors.ToList());
         }
+
+        [HttpPost]
+        public ActionResult FilmSearch(int? page, string country)
+        {
+            var allFilms = db.Film.Where(c => c.Country.Contains(country)).OrderBy(c => c.Country).ToList();
+            ViewBag.search = country;
+            int pageSize = 2;
+            int pageNumber = (page ?? 1);
+            if (allFilms.Count <= 0)
+            {
+                return HttpNotFound();
+            }
+            return View(allFilms.ToPagedList(pageNumber, pageSize));
+        }
+
+        // GET: Films searched
+       /* public ActionResult SearchedFilms(int? page)
+        {
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            var searched = RedirectToAction("FilmSearch");
+            return View(searched.ToPagedList(pageNumber, pageSize));
+
+        }*/
+
 
         // GET: Films
         public ActionResult Index()

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - приложение ASP.NET</title>
+    <title>@ViewBag.Title - app ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -22,7 +22,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("MyFilms", "Index", "Films")</li>
+                    <li>@Html.ActionLink("Films", "Index", "Films")</li>
                     <li>@Html.ActionLink("Actors", "Index", "Actors")</li>
                     @if (Request.IsAuthenticated && User.IsInRole("admin"))
                     {
@@ -38,10 +38,11 @@
         </div>
     </div>
     <div class="container body-content">
+        
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2022 JKTV21, Dmitry Krylov - мое приложение ASP.NET</p>
+            <p>&copy; 2022 JKTV21, Dmitry Krylov - my app ASP.NET</p>
         </footer>
     </div>
 

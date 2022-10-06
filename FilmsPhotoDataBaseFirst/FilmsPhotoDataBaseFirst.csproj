@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -220,6 +226,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,8 +241,6 @@
       <DependentUpon>ModelFilms.edmx</DependentUpon>
       <LastGenOutput>ModelFilms.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\ModelFilms.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelFilms.Designer.cs</LastGenOutput>
@@ -243,7 +248,17 @@
     <Content Include="Models\ModelFilms.edmx.diagram">
       <DependentUpon>ModelFilms.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -312,8 +327,6 @@
     <Content Include="Views\Films\Details.cshtml" />
     <Content Include="Views\Films\Edit.cshtml" />
     <Content Include="Views\Films\Index.cshtml" />
-    <Content Include="Views\FilmActors\Details.cshtml" />
-    <Content Include="Views\FilmActors\Index.cshtml" />
     <Content Include="Views\Actors\Create.cshtml" />
     <Content Include="Views\Actors\Delete.cshtml" />
     <Content Include="Views\Actors\Details.cshtml" />
@@ -325,19 +338,17 @@
     <Content Include="Views\ManageActors\Edit.cshtml" />
     <Content Include="Views\ManageActors\Index.cshtml" />
     <Content Include="Views\Films\ActorsInFilm.cshtml" />
+    <Content Include="Views\FilmActors\Create.cshtml" />
+    <Content Include="Views\FilmActors\Delete.cshtml" />
+    <Content Include="Views\FilmActors\Details.cshtml" />
+    <Content Include="Views\FilmActors\Edit.cshtml" />
+    <Content Include="Views\FilmActors\Index.cshtml" />
+    <Content Include="Views\Films\FilmSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
