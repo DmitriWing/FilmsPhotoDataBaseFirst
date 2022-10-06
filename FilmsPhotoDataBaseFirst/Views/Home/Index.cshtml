@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>
+@{ViewBag.Title = "Index";}
+
+<h3>The recent received</h3>
+
+<div class="row homePage">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="filmCoverHome">
+                <img class="index-img" src="@Url.Action("GetImage", "Home", new { id = item.Id})" />
+            </div>
+
+                <h4 class="filmTitleHome">@Html.DisplayFor(modelItem => item.Title)</h4>
+
+            <div class="linkCenter">
+                @Html.ActionLink("Details", "Details", "Films", new { id = item.Id }, new { @class = "linkCenter" })
+            </div>
+        </div>
+
+    }
+</div><!--row-->

@@ -1,0 +1,116 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+/*------------------------------- my ---------------------------------------------*/
+img{
+    display:inline-block;
+    max-height:90%;
+}
+.row{
+    margin-top:8rem;
+}
+.filmCard {
+    /* height:15vh;*/
+    margin: 3vh auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+.index-img{
+    width:100%;
+}
+.filmCover {
+    width: 180px;
+    height: 95%;
+    margin-right: 1vw;
+    align-self: center;
+    overflow: hidden;
+}
+
+.filmInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filmTitle {
+    text-align: center;
+    margin-top: 0;
+}
+/*------- Start page --------*/
+.homePage{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.linkCenter, .filmTitleHome {
+    text-align: center;
+}
+.filmCoverHome, .filmTitleHome, .linkCenter {
+    width: 230px;
+    margin:1rem auto;
+}
+/*---------------- details -----------------*/
+.rowDetails{
+    display:flex;
+    margin-bottom:3em;
+}
+.imgDetails {
+    width: 100%;
+}
+.imgDivDetails {
+    width: 230px;
+    
+}
+.countryDetails{
+    margin: 1em auto;
+
+}
+
+.actors {
+    margin:2em;
+}
+
+.deleteCover {
+    width: 9em;
+    height: 14em;
+}
+.img-rounded {
+    overflow: hidden;
+    width:100%;
+
+}
+.editCover{
+    width:22em;
+    height: 28em;
+}
+
+
+

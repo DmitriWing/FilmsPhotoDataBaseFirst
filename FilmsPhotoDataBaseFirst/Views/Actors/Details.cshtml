@@ -1,0 +1,20 @@
+﻿@model FilmsPhotoDataBaseFirst.Models.Actor
+
+@{ ViewBag.Title = "Details"; }
+
+<h2>@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.LastName)</h2>
+@if (Model.Photo != null)
+{
+    <div class="filmCoverHome">
+        <img class="index-img" src="@Url.Action("GetImage", new { id = Model.Id })" />
+    </div>
+}
+<div>
+    @*Films: @{
+        Html.RenderAction("FilmsOfActor", new { id = Model.Id });
+            } *@
+    @foreach(var films in Model.FilmActor)
+            {
+    <a href="~//Films/Details/@films.FilmId">@films.Film.Title</a><span>&nbsp&nbsp&nbsp</span>
+            }
+</div>

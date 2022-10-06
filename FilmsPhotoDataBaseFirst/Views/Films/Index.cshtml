@@ -1,0 +1,35 @@
+﻿﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Welcome to the films collection</h3>
+
+@foreach (var item in Model)
+{
+    <div class="row filmCard">
+
+        <div class="col-1 filmCover">
+            <img class="index-img img-responsive" src="@Url.Action("GetImage", new { id = item.Id })" />
+        </div>
+        <div class="col-11 filmInfo">
+            <h4 class="filmTitle">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h4>
+            <div class="filmDesc">@Html.DisplayFor(modelItem => item.Description)</div>
+            <div class="filmYear"> @Html.DisplayNameFor(model => model.Year) : @Html.DisplayFor(modelItem => item.Year)</div>
+            <div class="filmCountry"> @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(modelItem => item.Country)</div>
+            <div class="navLinks">
+                Actors:
+               @{
+                   Html.RenderAction("ActorsInFilm", new { id = item.Id });
+               }
+            </div>
+        </div>
+    </div><!--row-->
+}
+
+
+
+

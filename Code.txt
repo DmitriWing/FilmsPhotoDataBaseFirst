@@ -1,0 +1,25 @@
+ public ActionResult Create()
+        {
+            //----------------исходник
+            //ViewBag.ActorId = new SelectList(db.Actor, "Id", "FirstName"); 
+
+            //-----------другой вариант   
+            /*   var actors = db.Actor.Where(s => s.Id != 0).ToList();
+             IEnumerable<SelectListItem> selectList=from s in actors select new SelectListItem{
+                Value = s.Id.ToString(),
+                Text = s.FirstName + " " + s.LastName
+            };
+            ViewBag.ActorId = new SelectList(selectList, "Value", "Text");*/
+            //----MVC SelectList, объединяющий несколько столбцов в текстовом поле
+            //https://stackoverflow.com/questions/12727285/mvc-selectlist-combining-multiple-columns-in-text-field
+
+            var actors = db.Actor.Select(s => new SelectListItem
+             {
+                 Value = s.Id.ToString(),
+                 Text = s.FirstName + " " + s.LastName
+             });
+             ViewBag.ActorId = new SelectList(actors, "Value", "Text");
+
+            ViewBag.FilmId = new SelectList(db.Film, "Id", "Title");
+            return View();
+        }

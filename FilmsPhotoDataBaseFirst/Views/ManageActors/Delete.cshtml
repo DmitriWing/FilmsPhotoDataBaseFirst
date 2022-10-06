@@ -1,0 +1,29 @@
+﻿@model FilmsPhotoDataBaseFirst.Models.Actor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete <b>@Model.Name @Model.LastName</b> ?</h3>
+<div class="col-md-10 editCover">
+
+    @if (Model.Photo != null)
+    {
+        <img src="@Url.Action("GetImage", new { Model.Id })" class="img-responsive" width="600" />
+    }
+
+</div>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+

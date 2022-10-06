@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Actor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>All actors</h2>
+
+
+@Html.ActionLink("Create New", "Create")
+
+<div class="row homePage">
+    @foreach (var item in Model)
+    {
+        <div class="col actors">
+            @if (item.Photo != null)
+            {
+                <div class="filmCoverHome">
+                    <img class="index-img" src="@Url.Action("GetImage", "Actors", new { id = item.Id})" />
+                </div>
+            }
+
+
+            <h4 class="filmTitleHome">
+                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.LastName)
+            </h4>
+
+            <div class="linkCenter">
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </div>
+        </div>
+
+    }
+</div><!--row-->

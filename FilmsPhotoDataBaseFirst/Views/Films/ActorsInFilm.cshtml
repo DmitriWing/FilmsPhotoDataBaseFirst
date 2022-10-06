@@ -1,0 +1,14 @@
+﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.FilmActor>
+
+
+
+
+@foreach (var item in Model) {
+
+    <a href="~//Actors/Details/@item.Actor.Id">@Html.DisplayFor(modelItem => item.Actor.Name)  @Html.DisplayFor(modelItem => item.Actor.LastName)</a><span>&nbsp&nbsp&nbsp</span>
+    
+
+
+
+}
+

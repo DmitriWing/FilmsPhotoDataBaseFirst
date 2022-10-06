@@ -1,0 +1,38 @@
+﻿﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Here you can manage films</h3>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    @foreach (var item in Model)
+    {
+        <div class="row filmCard">
+            @if (item.Cover != null)
+            {
+                <div class="col-1 filmCover">
+                    <img class="index-img" src="@Url.Action("GetImage", "ManageFilms", new { id = item.Id})" />
+                </div>
+            }
+
+            <div class="col-11 filmInfo">
+                <h4 class="filmTitle">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </h4>
+                <div class="filmDesc">@Html.DisplayFor(modelItem => item.Description)</div>
+                <div class="filmYear"> @Html.DisplayNameFor(model => model.Year) : @Html.DisplayFor(modelItem => item.Year)</div>
+                <div class="filmCountry"> @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(modelItem => item.Country)</div>
+                <div class="navLinks">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </div>
+            </div>
+        </div><!--row-->
+    }
+
+
+
+
