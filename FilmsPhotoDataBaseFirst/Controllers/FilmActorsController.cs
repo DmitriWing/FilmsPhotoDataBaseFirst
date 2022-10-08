@@ -21,21 +21,6 @@ namespace FilmsPhotoDataBaseFirst.Controllers
             return View(filmActor.ToList());
         }
 
-        // GET: FilmActors/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FilmActor filmActor = db.FilmActor.Find(id);
-            if (filmActor == null)
-            {
-                return HttpNotFound();
-            }
-            return View(filmActor);
-        }
-
         // GET: FilmActors/Create
         public ActionResult Create()
         {

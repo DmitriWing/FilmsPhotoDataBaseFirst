@@ -132,6 +132,9 @@ img{
     border: 1px solid rgb(180, 180, 180);
     
 }
+.table-hover > tbody > tr:hover {
+    background-color: rgb(21, 21, 21);
+}
 
 
 

@@ -10,9 +10,8 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
+<p>Before add a new pair You must create actor and film first</p>
     <div class="form-horizontal">
-        <h4>FilmActor</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

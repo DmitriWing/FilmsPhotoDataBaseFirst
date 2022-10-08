@@ -35,22 +35,6 @@ namespace FilmsPhotoDataBaseFirst.Controllers
             return View(actors.ToList());
         }
 
-        // GET: ManageActors/Details/5
-        [Authorize(Roles = "admin")]
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Actor actor = db.Actor.Find(id);
-            if (actor == null)
-            {
-                return HttpNotFound();
-            }
-            return View(actor);
-        }
-
         // GET: ManageActors/Create
         public ActionResult Create()
         {

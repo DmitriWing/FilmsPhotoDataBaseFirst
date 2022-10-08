@@ -37,29 +37,7 @@ namespace FilmsPhotoDataBaseFirst.Controllers
             return View(allFilms);
         }
 
-        // render image from byte[] to picture
-        /*public async Task<ActionResult> RenderImage(int id)
-        {
-            Film item = await db.Film.FindAsync(id);
-            byte[] photoBack = item.Cover;
-            return File(photoBack, "image/png");
-        }*/
-
         // GET: Home/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Film film = db.Film.FirstOrDefault(t => t.Id == id);
-            if (film == null)
-            {
-                return HttpNotFound();
-            }
-            return View(film);
-        }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
