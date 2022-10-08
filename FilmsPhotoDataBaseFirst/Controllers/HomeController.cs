@@ -41,9 +41,7 @@ namespace FilmsPhotoDataBaseFirst.Controllers
         /*public async Task<ActionResult> RenderImage(int id)
         {
             Film item = await db.Film.FindAsync(id);
-
             byte[] photoBack = item.Cover;
-
             return File(photoBack, "image/png");
         }*/
 

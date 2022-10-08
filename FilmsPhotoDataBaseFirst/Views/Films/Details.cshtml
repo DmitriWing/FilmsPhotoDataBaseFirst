@@ -24,8 +24,9 @@
             <b>@Html.DisplayNameFor(model => model.Year)</b>: @Html.DisplayFor(model => model.Year)
         </div>
         <div class=" actorsInFilm">
+            Actors: 
             @{ 
-                //Html.RenderAction("ActorsInFilm", "FilmActors", new { id = Model.Id });
+                Html.RenderAction("ActorsInFilm", "Films", new { id = Model.Id });
             }
                 
             

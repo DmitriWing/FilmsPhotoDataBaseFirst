@@ -36,36 +36,16 @@ namespace FilmsPhotoDataBaseFirst.Controllers
             return PartialView(filmActors.ToList());
         }
 
-        [HttpPost]
-        public ActionResult FilmSearch(int? page, string country)
+        // GET: Films
+        public ActionResult Index(int? page)
         {
-            var allFilms = db.Film.Where(c => c.Country.Contains(country)).OrderBy(c => c.Country).ToList();
-            ViewBag.search = country;
+            var allFilms = db.Film.OrderBy(c => c.Country).ToList();
             int pageSize = 2;
             int pageNumber = (page ?? 1);
-            if (allFilms.Count <= 0)
-            {
-                return HttpNotFound();
-            }
             return View(allFilms.ToPagedList(pageNumber, pageSize));
         }
 
-        // GET: Films searched
-       /* public ActionResult SearchedFilms(int? page)
-        {
-            int pageSize = 3;
-            int pageNumber = (page ?? 1);
-            var searched = RedirectToAction("FilmSearch");
-            return View(searched.ToPagedList(pageNumber, pageSize));
 
-        }*/
-
-
-        // GET: Films
-        public ActionResult Index()
-        {
-            return View(db.Film.ToList());
-        }
 
         // GET: Films/Details/5
         public ActionResult Details(int? id)

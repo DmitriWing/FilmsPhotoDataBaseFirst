@@ -1,19 +1,22 @@
-﻿﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>
-
+﻿﻿@*model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>*@
+@model PagedList.IPagedList<FilmsPhotoDataBaseFirst.Models.Film>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
 }
 
 <h3>Welcome to the films collection</h3>
-<div>
-    Search films by country:
-    @using (Ajax.BeginForm("FilmSearch", "Films", new AjaxOptions { UpdateTargetId = "result" }))
-    {
-        <input type="text" name="country" />
-        <input type="submit" value="Search" />
-    }
+<div class=" row manageBar">
+    <div class="col-lg-6 searcBar">
+        @{
+            Html.RenderAction("Index", "FilmsSearch");
+        }
+    </div>
+    <div class="col-lg-6 pageBar">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    </div>
 </div>
-<div id="result"></div>
+<div id="result"></div>  @* here passing search result *@
 
 @foreach (var item in Model)
 {
@@ -27,8 +30,8 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </h4>
             <div class="filmDesc">@Html.DisplayFor(modelItem => item.Description)</div>
-            <div class="filmYear"> @Html.DisplayNameFor(model => model.Year) : @Html.DisplayFor(modelItem => item.Year)</div>
-            <div class="filmCountry"> @Html.DisplayNameFor(model => model.Country) : @Html.DisplayFor(modelItem => item.Country)</div>
+            <div class="filmYear"> Year : @Html.DisplayFor(modelItem => item.Year)</div>
+            <div class="filmCountry"> Country : @Html.DisplayFor(modelItem => item.Country)</div>
             <div class="navLinks">
                 Actors:
                 @{
@@ -38,6 +41,8 @@
         </div>
     </div><!--row-->
 }
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 
 
 

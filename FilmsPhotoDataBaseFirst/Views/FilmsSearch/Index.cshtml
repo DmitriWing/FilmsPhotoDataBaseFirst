@@ -1,0 +1,11 @@
+﻿@model IEnumerable<FilmsPhotoDataBaseFirst.Models.Film>
+
+Search films by country:
+@*using (Ajax.BeginForm("FilmSearch", "FilmsSearch", new AjaxOptions { UpdateTargetId = "result" }))*@
+@using (Html.BeginForm("FilmSearch", "FilmsSearch", FormMethod.Post))
+{
+    <input type="text" name="country" />
+    <input type="submit" value="Search" />
+}
+
+
