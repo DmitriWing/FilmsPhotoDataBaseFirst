@@ -473,3 +473,8 @@ D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBas
 D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.dll
 D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.xml
 D:\DOCUMENTS\JKTV21\C\ASP.Net_Projects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.xml
+D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.dll
+D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.dll
+D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.xml
+D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\bin\PagedList.Mvc.xml
+D:\JKTV21\ASP.NetProjects\FilmsPhotoDataBaseFirst\FilmsPhotoDataBaseFirst\obj\Debug\FilmsPhotoDataBaseFirst.csproj.AssemblyReference.cache
